@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="https://www.netflix.com/in/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.439), rgba(0, 0, 0, 0.435)), url("IV/brimage.jpg");
+        }
+
+        main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding-top: 100px;
+        }
+
+        .banner {
+            padding: 20px;
+            width: 100vw;
+            position: relative;
+        }
+
+        a .netflix {
+            width: 175px;
+
+            left: 10px;
+            margin-left: 25.069px;
+            margin-top: -70px;
+            z-index: 10;
+        }
+
+        .wrapper {
+            width: 420px;
+            background: rgba(0, 0, 0, .75);
+            backdrop-filter: blur(1px);
+            color: #fff;
+            border-radius: 5px;
+            padding: 100px 50px;
+        }
+
+        .wrapper h1 {
+            margin-bottom: 40px;
+            font-size: 32px;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 550;
+            text-align: left;
+        }
+
+        .input-box i {
+            position: relative;
+            display: flex;
+            margin-top: -40px;
+            margin-left: 270px;
+        }
+
+        form .input-box {
+            position: relative;
+            height: 50px;
+            margin-bottom: 16px;
+        }
+
+        .input-box input {
+            height: 100%;
+            width: 100%;
+            background: #333;
+            outline: none;
+            border: none;
+            color: #fff;
+            font-size: 1rem;
+            border-radius: 4px;
+            padding: 0 20px;
+        }
+
+        .input-box label {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            color: grey;
+            font-size: 1rem;
+            pointer-events: none;
+            transform: translateY(-50%);
+            transition: all 0.1s ease;
+        }
+
+        .input-box input:is(:focus, :valid)~label {
+            font-size: 0.75rem;
+            transform: translateY(-130%);
+        }
+
+        .wrapper .remember-forgot {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14.5px;
+            color: #ffffff9b;
+            margin: -15px 0 70px;
+        }
+
+        .remember-forgot label input {
+            accent-color: #fff;
+            margin-right: 3px;
+            margin-top: 35px;
+        }
+
+        .wrapper .btn {
+            width: 100%;
+            height: 45px;
+            font-family: 'Segoe UI', sans-serif;
+            background: #d60b0b;
+            border: none;
+            outline: none;
+            border-radius: 6px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+            cursor: pointer;
+            font-size: 16px;
+            color: #fff;
+            font-weight: 600;
+            margin-top: 30px;
+        }
+
+        .wrapper .register-link {
+            font-size: 14.5px;
+            text-align: center;
+            margin: 20px 0 15px;
+        }
+
+        .remember-forgot label {
+            font-size: 13px;
+            color: grey;
+        }
+
+        .remember-forgot a {
+            color: grey;
+            text-decoration: none;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 13px;
+            margin-top: 33px;
+        }
+
+        .remember-forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .register-link {
+            display: inline;
+            color: grey;
+        }
+
+        .register-link p {
+            text-align: left;
+            font-size: 15px;
+        }
+
+        .register-link p a {
+            color: white;
+            text-decoration: none;
+            font-weight: 60px;
+        }
+
+        .register-link p a:hover {
+            text-decoration: underline;
+        }
+
+        .register p {
+            font-size: 13px;
+            margin: 20px auto;
+        }
+
+        .register a {
+            font-size: 12px;
+            color: blue !important;
+        }
+
+
+        footer {
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9 );
+        }
+
+        .footer {
+            padding: 50px 15px 10px;
+            padding: 20px;
+            height: 100%;
+
+        }
+
+        .footer {
+            font-size: 18px;
+            font-size: 17px;
+        }
+
+        .footer .footer1 {
+            margin: 5px 230px;
+            color: grey;
+        }
+
+        .footer a {
+            font-size: 18px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: grey;
+            font-size: 17px;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin: 0px 230px;
+        }
+
+        .footer .col {
+            flex-basis: 25%;
+            flex-grow: 1;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer .col a {
+            display: block;
+            color: #9b9696;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .footer .row {
+            align-items: flex-start;
+            padding: 10px 0;
+        }
+
+        .footer .lang-btn {
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 3px;
+        }
+
+        .row a:hover {
+            text-decoration: underline;
+        }
+
+        .ftr-content {
+            width: 70%;
+            font-size: 1em;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-evenly;
+        }
+
+        .ftr-content a {
+            color: #999;
+            width: 25%;
+            margin-bottom: 15px;
+        }
+
+        .ftr-content a:hover {
+            text-decoration: underline;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        .ftr {
+            width: 70%;
+            font-size: 0.8em;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+
+        
+
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        #netflix-logo {
+            display: none;
+        }
+
+        @media screen and (max-width: 650px) {
+
+            body {
+                background: black;
+                justify-content: space-between;
+            }
+
+            #video-container {
+                display: none;
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                height: max-content;
+            }
+
+            #netflix-logo {
+                display: unset;
+                width: 100%;
+            }
+
+            #netflix-logo>img {
+                width: 30%;
+            }
+
+            #content {
+                width: 100%;
+            }
+
+            .wrapper {
+                border: none;
+                padding: 10px 20px;
+                width: 100%;
+            }
+
+            .wrapper .input-box {
+                border-radius: 5px;
+            }
+
+            #input1 {
+                margin: 30px 0 20px 0;
+            }
+
+            #input2 {
+                margin: 20px 0 35px 0;
+            }
+
+            .input-box input {
+                border: none;
+            }
+
+            .wrapper h1 {
+                margin-top: unset;
+            }
+
+            footer {
+                border-top: 2px solid #80808075;
+            }
+
+            .ftr-content {
+                width: 100%;
+                padding: 0 20px;
+            }
+
+            .ftr-content a {
+                width: 50%;
+            }
+
+        }
+
+        @media (max-width: 767px) {
+            body {
+                background-color: #333;
+                background-image: none;
+
+            }
+
+            #netflix-logo {
+                display: none;
+            }
+
+            .banner img {
+                width: 120px;
+                position: fixed;
+            }
+
+            main {
+                margin: 40px;
+            }
+        }
+
+        
+
+        .hero {
+            position: relative;
+        }
+
+        .hero__bg__overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+
+        }
+
+
+        .hero__bg__image__container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+        }
+
+        .hero__bg__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .wrapper {
+
+            margin: auto;
+        }
+
+        footer {
+            padding-top: 20px;
+            width: 100%;
+        }
+
+        .hero{
+          margin: 100px;
+        }
+
+
+
+  .dropdown__container {
+    position: relative;
+    display: inline-block;
+    margin-left: 230px;
+}
+
+.dropdown__container i {
+    position: absolute;
+    top: 50%;
+    left: 8px;
+    transform: translateY(-50%);
+    color: white;
+}
+
+.language__drop__down {
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    color: white;
+    padding: 8px 30px 8px 30px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.language__drop__down option {
+    background-color: white;
+    width: 100%;
+    color: black;
+}
+
+        
+    </style>
+
+</head>
+
+<body>
+
+    <main>
+        <section style=" margin-top: -50px;" class="hero">
+
+            <div class="banner">
+                <a href="NETFLIX_LANDING_PAGE.html">
+                    <img class="netflix" src="IV/logoNetflix.png" alt="Netflix Logo">
+                </a>
+
+                
+
+            </div>
+
+
+            <div id="content">
+                <div class="pics">
+                    <div class="wrapper">
+                        <form action="">
+                            <h1>Sign In</h1>
+                            <div class="input-box" id="input1">
+                                <input type="text" required>
+                                <label>Email or phone number</label>
+                            </div>
+                            <div class="input-box" id="input2">
+                                <input type="password" required>
+                                <label>Password</label>
+                            </div>
+                            <button type="submit" class="btn">Sign In</button>
+                            <div class="remember-forgot">
+                                <label><input type="checkbox">Remember Me</label>
+                                <a href="#">Need help?</a>
+                            </div>
+                            <div class="register-link">
+                                <p>New to Netflix? <a href="main.html">Sign up now</a></p>
+                                <div class="register">
+                                    <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.<a href="#">Learn more.</a></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="footer1">
+    <a href="contact.html">Questions? Contact Us</a>
+</div>
+
+            <div class="row">
+                <div class="col">
+                    <a href="#">FAQ</a>
+                    <a href="#">Cookie Preferrence</a>
+                </div>
+                <div class="col">
+                    <a href="#">Help Center</a>
+                    <a href="#">Corporate Information</a>
+                </div>
+                <div class="col">
+                    <a href="#">Terms of Use</a>
+                </div>
+                <div class="col">
+                    <a href="#">Privacy</a>
+                </div>
+            </div>
+            
+
+<div class="footer__row__3">
+        <div class="dropdown__container">
+            <i class="fas fa-globe"></i>
+            <select
+                name="languages"
+                id="languagesSelect"
+                class="language__drop__down"
+            >
+                <option value="english" selected style="color: black;">English</option>
+                <option value="filipino" style="color: black;">Filipino</option>
+
+            </select>
+<i style="margin-left: 75px;" class="fas fa-caret-down"></i>
+        </div>
+    </div>
+
+
+
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+
+</body>
+
+</html>

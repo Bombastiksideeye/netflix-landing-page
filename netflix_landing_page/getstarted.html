@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="shortcut icon" href="https://www.netflix.com/in/favicon.ico" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-y: scroll;
+            position: relative;
+            background-color: #fff;
+        }
+
+        header, main, footer {
+            border-top: 1px solid #ccc;
+        }
+
+        header {
+            background-color: white;
+            padding: 20px 0;
+            text-align: center;
+            color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand__logo {
+            height: 40px;
+            vertical-align: middle;
+        }
+
+        .navbar__nav__item {
+            margin-left: auto;
+            margin-right: 40px;
+        }
+
+        header a {
+            color: #000;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        header a:hover {
+            text-decoration: underline; 
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer {
+            width: 100%;
+            padding-top: 20px;
+            background-color: #f3f3f3;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .footer__row__3 {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .dropdown__container {
+            position: relative;
+            border: 1px solid gray;
+            margin-left: 80px;
+            margin-top: 0.05%;
+            margin-bottom: 30px;
+            background: white;
+            width: 120px;
+            height: 50px;
+        }
+
+        .language__drop__down {
+            appearance: none;
+            -webkit-appearance: none;
+            color: gray;
+            padding: 5px 15px 5px 15px;
+            border: none; 
+            border-radius: 4px;
+            width: 80%;
+            height: 100%;
+            margin-left: 15px;
+            background-color: transparent;
+            font-size: 17px;
+
+
+
+
+        }
+
+        .language__drop__down option {
+            background-color: white;
+            color: gray;
+        }
+
+        .fa-globe {
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+            color: #333;
+        }
+
+        .fa-caret-down {
+            position: relative;
+            margin-left: -25px;
+            margin-top: 18px;
+            color: #333;
+
+        }
+
+        .footer .col {
+            flex-grow: 1;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            display: inline-block;
+            text-align: left;
+            padding: 0 60px;
+            width: 90%;
+
+        }
+
+        .footer a {
+            color: gray;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .next-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .next-button:hover {
+           background-color: red;
+        }
+
+        .step-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .navbar{
+            height: 45px;
+            width: 167px;
+        }
+
+        .next-button{
+            margin-bottom: 7.5%; 
+            font-size: 26px;
+            width: 350px;
+            height: 65px;
+            background-color: #e50914;
+            font-weight: 400;
+        }
+
+       .navbar__item{
+         margin-right: 50px;
+       }
+
+       
+.row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+}
+
+
+
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="navbar__brand">
+                <a href="NETFLIX_LANDING_PAGE.html">
+                <img style="width: 180px; height: 55px; margin-left: 40px; margin-bottom: 10px;" src="IV/netflix-logo.png" alt="logo"  class="brand__logo"/>
+                </a>
+            </div>
+
+            
+        </nav>
+        <div class="navbar__item">
+                <b><a href="sign-in.html">Sign In</a></b>
+            </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            
+            <img style=" margin-top: 7.5%; width: 270px; height: 60px; " src="IV/Devices.png" alt="Netflix Image"><br><br>
+            
+            <div class="step-info">
+                <div class="step-info">
+                    <p style="font-size: 12px;">STEP <b>1</b> OF <b>3</b></p>
+                    <h1 style="font-size: 32px; padding-top: 4px">Finish setting up your</h1>
+                    <h1 style="font-size: 32px;">account</h1>
+                    <p style="font-size: 18px; margin-top: 10px;">Netflix is personalized for you.<br> Create a password to start watching<br> Netflix.</p><br>
+                    <button class="next-button">Next</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            
+            <div class="row">
+                <div style=" margin-left: 20px" class="col">
+                    <a style="font-size: 18px;" href="contact.html">Questions? Contact Us</a><br><br>
+                    <a href="#">FAQ</a><br>
+                    <a href="#">Privacy</a><br>
+                </div>
+                <div style="margin-top: 60px; margin-left:-200px;" class="col">
+                    <a href="#">Help Centre</a><br>
+                    <a href="#">Cookie Preferrence</a>
+                </div>
+                <div style="margin-top: 65px; margin-left:-180px;" class="col">
+                    
+                    <a href="#">Netflix Shop</a><br>
+                    <a href="#">Corporate Information</a>
+                </div>
+                <div style="margin-top: 80px;margin-left:-160px;" class="col">
+                    <a href="#">Terms of Use</a>
+                </div>
+            </div>
+<div class="footer__row__3">
+        <div class="dropdown__container">
+            <i class="fas fa-globe"></i>
+            <select
+                name="languages"
+                id="languagesSelect"
+                class="language__drop__down"
+            >
+                <option value="english" selected style="color: black;">English</option>
+                <option value="filipino" style="color: black;">Filipino</option>
+
+            </select>
+
+        </div>
+        <i class="fas fa-caret-down"></i>
+    </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>
+
+
